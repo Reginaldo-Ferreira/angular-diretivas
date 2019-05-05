@@ -1,0 +1,29 @@
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+
+  <div class="collapse navbar-collapse" id="navbarNav">
+    <ul class="navbar-nav">
+      <li class="nav-item "><!-- ao clicar atribui o valor correspondente e passado para variavel aba , a propriedade class muda de acordo com o comparativo no requisito de compoaração e por fim deixa ativo ou não-->
+        <a class="nav-link"
+        [class.active] ="aba == 'home'" (click) = "aba = 'home'">Home <span class="sr-only">(current)</span></a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" [class.active] ="aba == 'Features'" (click) = "aba = 'Features'" >Features</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" [class.active] ="aba == 'Pricing'" (click) = "aba = 'Pricing'" >Pricing</a>
+      </li>
+
+    </ul>
+  </div>
+</nav>
+<div class="container" [ngSwitch]="aba">
+  <p *ngSwitchCase="'Pricing'">
+  Modo Pricing ativado
+  </p>
+  <p *ngSwitchCase="'Features'"><!--não esquecer aspas simples-->
+    Modo Home Features
+  </p>
+  <p *ngSwitchDefault>
+    Modo Home ativados
+  </p>
+  </div>

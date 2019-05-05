@@ -1,0 +1,7 @@
+<p>  Descrição :  {{tarefa.desc}}</p>
+<!--p>Responspável: {{tarefa.responsavel.nome}}</p esso condigo gerará um erro de null pelo motivo do objeto não conter o atributo 'nome'-->
+
+<!--p>1. Responspável: {{tarefa.responsavel != null ? tarefa.responsave.nome : ''}}</p-->
+<p>utilizando o operador elvis '?'</p>
+
+<p>2. Responspável: {{tarefa.responsavel?.usuario?.nome}}</p>

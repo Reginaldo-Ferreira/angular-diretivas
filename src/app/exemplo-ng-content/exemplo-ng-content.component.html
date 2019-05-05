@@ -1,0 +1,22 @@
+<div class="card">
+  <div class="card-header">
+
+      <!--                                   -->
+      <ng-content select=".titulo"></ng-content>
+      <!--                                   -->
+
+    Quote
+  </div>
+  <div class="card-body">
+    <blockquote class="blockquote mb-0">
+
+
+      <!--usando classe corpo para identificar a reescrita no template-->
+      <ng-content select=".corpo"></ng-content>
+      <!--                                   -->
+
+     
+      <footer class="blockquote-footer">Someone famous in <cite title="Source Title">Source Title</cite></footer>
+    </blockquote>
+  </div>
+</div>

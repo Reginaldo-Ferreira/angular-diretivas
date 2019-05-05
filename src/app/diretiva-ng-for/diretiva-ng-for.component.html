@@ -1,0 +1,13 @@
+
+
+<ul>
+<li *ngFor="let curso of cursos">{{curso}}</li>
+
+</ul>
+<h5>Outra forma de literação com for</h5>
+<ul>
+  <li *ngFor="let curso of cursos, let i =index"><!--a variavel index ja esta est na diretiva 'for' passando o valor do index para a variavel 'i'-->
+  {{ i }} - {{curso}}
+  </li>
+  
+  </ul>

@@ -1,0 +1,34 @@
+<p FundoAmareloEsverdeado>
+  texto com fundo amarelo-esverdeado.
+</p>
+<button FundoAmareloEsverdeado>botão com fundo amarelo-esverdeado</button>
+<p appHighlightMouse>
+  texto com hightlight quando passo o maouse.
+</p>
+
+<p  [appHighlight]="'red'" [defaultColor]="'grey'">
+    texto com hightlight com cores customizadas.
+  </p>
+
+
+<br>
+  <h4> Criando uma diretiva de estrutura com o nome de [ngElse]</h4>
+<div *ngIf="mostrarCursos">
+[com ngIf]- Lista de cursos aqui.
+</div>
+
+<div *ngElse="mostrarCursos"><!--caso contrario mostre esta div-->
+ [com ngElse]- Não existe cursos para serem listados.
+</div>
+<br>
+
+<button (click)="onMostrarCuros()" >
+  Mostrar ou esconder cursos
+</button>
+
+<!--template [ngElse]="mostrarCursos">
+  <div>
+    [com ngIf 'Template' ]- Lista de cursos aqui.
+    </div>
+
+</template-->

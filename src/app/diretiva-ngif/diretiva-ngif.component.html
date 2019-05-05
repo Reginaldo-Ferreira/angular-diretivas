@@ -1,0 +1,44 @@
+<h3 >*ngIf</h3>
+<div *ngIf="cursos.length > 0">
+   Lista de cursos aqui.
+</div>
+
+<div *ngIf="cursos.length == 0">
+  Não existe cursos para serem listados.
+</div>
+
+<h4> NgIf com variavel boolean</h4>
+<div *ngIf="mostrarCursos">
+  Lista de cursos aqui.
+
+</div>
+
+<div *ngIf="!mostrarCursos"><!--caso contrario mostre esta div-->
+ Não existe cursos para serem listados.
+
+</div>
+<br>
+
+<button (click)="onMostrarCuros()" >Mostrar ou esconder cursos</button>
+<br><br>
+
+<h5>Hidden como alternativa</h5>
+<div [hidden]="!mostrarCursos">
+  Lista de cursos aqui.
+</div>
+
+<div [hidden]="mostrarCursos"><!--caso contrario não mostre esta div-->
+ Não existe cursos para serem listados.
+</div>
+
+<br><br><br><br>
+
+<p>Outra maneira de usar NgIf</p>
+
+<!--template [ngIf]="mostrarCursos">
+    <div>Lista de cursos aqui.. também</div>
+</template-->
+
+<div template="ngIf mostrarCursos">
+    Lista de cursos aqui. /template="ngIf mostrarCursos"/
+</div>

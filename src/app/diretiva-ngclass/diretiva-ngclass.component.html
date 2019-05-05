@@ -1,0 +1,30 @@
+<i class="material-icons">
+
+
+    {{nomeDoIconPadrao}}</i>
+<!--o primeiro class é par estrela vazia e o sengundo preenchido-->
+<h1>
+    Somete [class]
+    <i class="material-icons" 
+    [class.md-light]="meufavorito"
+    [class.md-dark]="!meufavorito" 
+    (click)="onClick()">
+        {{nomeDoIconPadrao}}
+    </i>
+</h1>
+
+<h1>
+    Com [NgClass]
+    <i class="material-icons" [ngClass]="{
+        'class.md-light': meufavorito,
+        'class.md-dark': !meufavorito
+    }" (click)="onClick()">
+        {{nomeDoIconPadrao}}
+    </i>
+</h1>
+
+<br><br>
+<button [style.color]="isSpecial ? 'red': 'green'" (click)="mudarIsSpecial()">Red</button>
+<button [style.background-color]="canSave ? 'cyan': 'grey'">Save</button>
+<button [style.font-size.em]="isSpecial ? 3 : 1">Big</button>
+<button [style.font-size.%]="!isSpecial ? 150 : 50">Small</button>
